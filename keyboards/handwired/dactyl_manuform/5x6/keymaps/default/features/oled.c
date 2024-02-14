@@ -66,9 +66,39 @@ bool oled_task_user(void) {
     case RGB_MATRIX_BREATHING:
         oled_write_P(PSTR("Breathing"), true);
         break;
+    case RGB_MATRIX_BAND_SAT:
+        oled_write_P(PSTR("Band sat"), true);
+        break;
+    case RGB_MATRIX_BAND_VAL:
+        oled_write_P(PSTR("Band val"), true);
+        break;
+    case RGB_MATRIX_BAND_PINWHEEL_SAT:
+        oled_write_P(PSTR("Pinwheel sat"), true);
+        break;
+    case RGB_MATRIX_STARLIGHT_DUAL_HUE:
+        oled_write_P(PSTR("Starlight dual h"), true);
+        break;
+    case RGB_MATRIX_STARLIGHT_DUAL_SAT:
+        oled_write_P(PSTR("Starlight dual s"), true);
+        break;
+    // case RGB_MATRIX_STARLIGHT_DUAL:
+    //     oled_write_P(PSTR("Starlight dual"), true);
+    //     break;
+    // case RGB_MATRIX_RIVERFLOW:
+    //     oled_write_P(PSTR("Riverflow"), true);
+    //     break;
+    case RGB_MATRIX_BAND_SPIRAL_VAL:
+        oled_write_P(PSTR("Spiral val"), true);
+        break;
+    case RGB_MATRIX_CYCLE_LEFT_RIGHT:
+        oled_write_P(PSTR("cycle left/r"), true);
+        break;
+    case RGB_MATRIX_CYCLE_UP_DOWN:
+        oled_write_P(PSTR("cycle u/d"), true);
+        break;
 
 	default:
-		oled_write_P(PSTR("Otro"), true);
+		oled_write_P(PSTR("I didn't set this one"), true);
 		break;
   }
 
