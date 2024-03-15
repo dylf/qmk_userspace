@@ -14,3 +14,5 @@ RGB_MATRIX_DRIVER = ws2812
 RGB_MATRIX_SUPPORTED = yes
 OLED_ENABLE = yes
 LTO_ENABLE = yes             # Enable link time optimization
+# WPM_ENABLE = yes             # Enable words per minute output
+

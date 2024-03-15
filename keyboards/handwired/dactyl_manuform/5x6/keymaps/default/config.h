@@ -21,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define WS2812_DI_PIN D3
 #define RGB_MATRIX_LED_COUNT 64
 #ifdef RGB_MATRIX_ENABLE
+# define RGB_MATRIX_DEFAULT_HUE 212
 // limits maximum brightness of LEDs to 150 out of 255.
 // Higher may cause the controller to crash.
 #  define RGB_MATRIX_MAXIMUM_BRIGHTNESS 80
@@ -123,3 +124,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SPLIT_WPM_ENABLE
 #define SPLIT_OLED_ENABLE
 // #define RGBLIGHT_SPLIT { 32, 32 }
+

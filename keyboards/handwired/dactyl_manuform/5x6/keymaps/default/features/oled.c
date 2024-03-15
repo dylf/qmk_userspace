@@ -48,7 +48,7 @@ bool oled_task_user(void) {
 
 
  #ifdef RGB_MATRIX_ENABLE
- // oled_write_P(PSTR("\nRGB: "), false);
+ oled_write_P(PSTR("\nRGB: "), false);
 //Display the name of the current animation
   switch (rgblight_get_mode()){
 	case RGB_MATRIX_CYCLE_ALL:
@@ -102,9 +102,24 @@ bool oled_task_user(void) {
 		break;
   }
 
+  oled_write_P(PSTR("\nHue: "), false);
+    oled_write_P(get_u8_str(rgb_matrix_get_hue(), '0'), false);
+    oled_write_P(PSTR(" Sat: "), false);
+    oled_write_P(get_u8_str(rgb_matrix_get_sat(), '0'), false);
+    oled_write_P(PSTR(" Val: "), false);
+    oled_write_P(get_u8_str(rgb_matrix_get_val(), '0'), false);
+
+
+
 
     return false;
 }
 #endif
+
+#ifdef WPM_ENABLE
+oled_write_P(PSTR("\nWPM: "), false);
+oled_write_P(get_u8_str(get_current_wpm(), '0'), false);
+#endif
+
 #endif
 //
